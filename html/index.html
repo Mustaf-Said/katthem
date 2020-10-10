@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>MS katthem</title>
+</head>
+
+<body>
+    <section class="continer">
+
+        <header class="header flex-box">
+            <article class="item1">
+                <a>SAW KATTHEM</a>
+            </article>
+            <article class="item2" class="top" onclick="w3_open()" style="cursor: pointer;">
+                <figure>
+                    <img src="../images/list.svg" alt="list">
+                </figure>
+            </article>
+            <article class="item3" id="mySidebar">
+                <ul onclick="w3_close()">
+                    <li>Close List</li>
+                    <a href="../html/contact.html"><li>contact</li></a>
+                    <a href="../html/about.html"><li>om oss</li></a>
+                    <a href="../html/cat.html"><li>kattar</li></a>
+                </ul>
+            </article>
+        </header>
+
+        <main class="main flex-box">
+            <aside class="aside">
+                <article>
+                    <a class="prev" onclick="plusSlides(-1)">
+                        <img src="../images/prev.svg" alt="prev"> </a>
+                </article>
+                <a class="next" onclick="plusSlides(1)"> <img src="../images/next.svg" alt="next"> </a>
+                </article>
+            </aside>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1551134463-3400756d88f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+                    alt="cat1" class="mySlides" onclick="currentSlide(1)">
+                <img src="https://images.unsplash.com/photo-1587889647477-55bc930eef73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="cat3" class="mySlides" onclick="currentSlide(3)">
+                <img src="https://images.unsplash.com/photo-1554024602-f082a8c3dc30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    class="mySlides" onclick="currentSlide(4)" alt="cat4">
+            </figure>
+        </main>
+
+        <footer class="footer flex-box">
+            <section class="item1">
+                <h3>&copy;CopyRight <br>Mustaf Said</h3>
+            </section>
+            <section class="item2"><a href="#top"><img src="../images/upp.svg" alt="upp"></a>
+            </section>
+            <section class="item3">
+                <h3>följa oss på Social media</h3>
+                <a href="#"> <img src="../images/fac.svg" alt="fac"> </a>
+                <a href="#"> <img src="../images/git.svg" alt="git"> </a>
+                <a href="#"> <img src="../images/twi.svg" alt="twit"> </a>
+            </section>
+        </footer>
+    </section>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
