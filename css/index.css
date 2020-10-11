@@ -8,7 +8,7 @@
   --text-shadow-color: #6264cf;
 }
 body{
-   max-width: 1440px;
+    max-width: 1440px;
     color:var( --text-color);
     font-family: 'Sansita Swashed', cursive;
     margin: 0;
@@ -23,7 +23,7 @@ a{
 .continer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto 150px;
     grid-template-areas: 
     'header header header'
     'main main main'
@@ -41,15 +41,20 @@ a{
 .header{
   grid-area: header;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+}
+.header article{
+  align-self: center;
 }
 .header .item1{
-  align-self: center;
+  /*align-self: center;*/
   font-size: 2.9rem;
   font-weight: 700;
   text-shadow: 4px 3px  var(  --text-shadow-color);
 }
 .header .item2{
-  align-self: center;
+  /*align-self: center;*/
   width: 10%;
   margin: 0;
 }
@@ -62,9 +67,6 @@ a{
 }
 .header .item2 figure img:hover{
   opacity: .5;
-}
-.header .item3{
-  align-self: center;
 }
 .header .item3 ul{
   list-style: none;
@@ -85,13 +87,14 @@ a{
   grid-area: main;
   display: block;
   position: relative;
+  z-index: -1;
 }
 .main article{
   width: 100%;
   margin: 0;
 }
 .main figure{
-  max-height: 650px;
+  /*max-height: 950px;*/
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -117,28 +120,34 @@ a{
 .footer {
     grid-area: footer;
 }
-.footer .item1{
+.footer section{
   align-self: center;
 }
-.footer .item2{
-  align-self: center;
-}
-.footer .item3{
-  align-self: center;
-}
-.footer article{
-  width: 100%;
-  margin: 0;
-}
-.footer .item3 h3{
+.footer h3{
   margin: 0;
 }
 .footer .item3 img{
   width: 31.9%;
 }
-.footer section img:hover{
+.footer img:hover{
     opacity: 0.5;
 }
+.home{
+  animation-name: home;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+@keyframes home{
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}*
 /*--------@media style---------*/
 @media screen and (min-width:640px){
         .continer{
