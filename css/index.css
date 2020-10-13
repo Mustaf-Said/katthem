@@ -23,7 +23,7 @@ a{
 .continer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto 150px;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
     'header header header'
     'main main main'
@@ -75,10 +75,11 @@ a{
   font-size: 1.3em;
   font-weight: 500;
 }
-.header li:nth-child(1):hover{
+ ul li:hover{
  color: var(--li-child-color);
+ cursor: pointer;
 }
-.header li:hover{
+.header a li:hover{
   color: var( --li-color);
   cursor: pointer;
 }
@@ -86,6 +87,8 @@ a{
 .main{
   grid-area: main;
   display: block;
+  min-width: 21rem;
+  min-height: 90px;
   position: relative;
   z-index: -1;
 }
@@ -93,13 +96,13 @@ a{
   width: 100%;
   margin: 0;
 }
-.main figure{
+.main article figure{
   /*max-height: 950px;*/
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-.main figure img{
+.main article figure img{
     width: 100%;
 }
 /*--------------Aside style------------*/
@@ -109,7 +112,7 @@ a{
 .next{
  right: 0;
 }
-.aside a{
+.aside article a {
   position: absolute;
   cursor: pointer;
   user-select: none;
